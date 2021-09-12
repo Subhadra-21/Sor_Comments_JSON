@@ -8,7 +8,7 @@ class App extends Component {
       <div className="App">
         <h1>Comment Feed</h1>
         <button onClick={this.resetCommentFeed}>Reset comment feed</button>
-        <CommentsList />
+        <CommentsList triggerRender={Date.now()}/>
       </div>
     );
   }
