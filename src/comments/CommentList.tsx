@@ -7,7 +7,7 @@ export default function CommentList(props){
     const [filvalue, setFilter] = useState('');
     useEffect(()=>{
         getComments();
-    },[]);
+    },[props.triggerRender]);
 
     async function getComments(){
         const response = await fetch('/api/comments');
@@ -84,5 +84,4 @@ function Comment(props){
             <button onClick={props.handleDelete} data-cid={props.id}>X</button>
         </div>
     );
-}  
-  
+}
